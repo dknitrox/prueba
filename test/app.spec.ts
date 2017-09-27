@@ -6,7 +6,7 @@ import { expect,should } from 'chai';
 describe('#Numeros', () => {
   
   it('1+1=2', (cb) => {
-    expect(2).to.be.eq(1+1);
+    expect(2).to.be.eq(2);
     cb()
   });
 

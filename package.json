@@ -15,8 +15,8 @@
     "clean": "rimraf dist",
     "server": "nodemon dist/server.js",
     "watch": "webpack --watch",
-    "test": "karma start",
-    "test-server": "set NODE_ENV=test && mocha-webpack --timeout 10000 --recursive --webpack-config webpack/webpack.test.js test/**/*.spec.ts"
+    "test2": "karma start",
+    "test": "set NODE_ENV=test && mocha-webpack --timeout 10000 --recursive --webpack-config webpack/webpack.test.js test/**/*.spec.ts"
   },
   "engines": {
     "node": ">=6.0.0"
