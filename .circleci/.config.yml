@@ -10,13 +10,11 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
       # example
-      # example2
     working_directory: ~/repo
-    general:
-      branches:
-        only:
+    branches:
+      only:
           - develop # list of branches to build
-     steps:
+    steps:
       - checkout
 
       # Download and cache dependencies
