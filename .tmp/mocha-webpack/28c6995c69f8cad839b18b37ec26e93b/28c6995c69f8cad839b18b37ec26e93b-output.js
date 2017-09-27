@@ -162,7 +162,6 @@ describe('#Numeros', function () {
                 .expect('Content-type', /json/)
                 .expect(200)
                 .then(function (data) {
-                console.log("data");
                 chai_1.expect("exito").to.be.equals(data.body.data);
             });
         });
