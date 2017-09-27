@@ -16,10 +16,11 @@ app.get('/data', (req, res) => {
   console.timeEnd(`GET: ${req.originalUrl}`);
 });
 
-app.listen(8001,()=>{
-
-
+export var server=app.listen(8001,()=>{
+console.log("app inciiada")
 })
+
+  
 /*
 request(app)
 .get('/user')
