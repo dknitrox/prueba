@@ -1,0 +1,7 @@
+/node_modules/
+/dist/
+/lib/
+/tests/
+/build/
+/yarn.lock
+*.log
