@@ -122,6 +122,10 @@ exports.app.get('/data', function (req, res) {
     res.status(200).send({ data: "exito" });
     console.timeEnd("GET: " + req.originalUrl);
 });
+exports.app.get('/users', function (req, res) {
+    console.time("GET: " + req.originalUrl);
+    res.status(200).json({ data: ["a", "b", "c"] });
+});
 exports.server = exports.app.listen(8001, function () {
     console.log("app inciiada");
 });
@@ -163,6 +167,14 @@ describe('#Numeros', function () {
                 .expect(200)
                 .then(function (data) {
                 chai_1.expect("exito").to.be.equals(data.body.data);
+            });
+        });
+        it('Testeando users', function () {
+            return request
+                .get('/users')
+                .expect(200)
+                .then(function (data) {
+                chai_1.expect(3).to.be.equals(data.body.data.length);
             });
         });
     });

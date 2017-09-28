@@ -15,7 +15,7 @@ describe('#Numeros', () => {
   });
 
   describe('#Testeando un endpoint', () => {
-    
+      
       it('--- Con promise',() => {
         return request
         .get('/data')
@@ -25,7 +25,14 @@ describe('#Numeros', () => {
           expect("exito").to.be.equals(data.body.data);   
         })
       });
-    
+      it('Testeando users',() => {
+        return request
+        .get('/users')
+        .expect(200)
+        .then((data)=>{
+          expect(3).to.be.equals(data.body.data.length);   
+        })
+      });
     
     });
 });
