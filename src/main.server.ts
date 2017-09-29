@@ -15,11 +15,15 @@ app.get('/data', (req, res) => {
   res.status(200).send({data:"exito"});
   console.timeEnd(`GET: ${req.originalUrl}`);
 });
-
-app.listen(8001,()=>{
-
-
+app.get('/users', (req, res) => {
+  console.time(`GET: ${req.originalUrl}`);
+  res.status(200).json({data:["a","b","c"]});
+});
+export var server=app.listen(4040,()=>{
+console.log("app inciiada")
 })
+
+  
 /*
 request(app)
 .get('/user')
