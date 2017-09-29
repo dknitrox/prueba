@@ -19,7 +19,7 @@ app.get('/users', (req, res) => {
   console.time(`GET: ${req.originalUrl}`);
   res.status(200).json({data:["a","b","c"]});
 });
-export var server=app.listen(8001,()=>{
+export var server=app.listen(4040,()=>{
 console.log("app inciiada")
 })
 
